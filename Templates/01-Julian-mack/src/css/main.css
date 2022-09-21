@@ -7,11 +7,17 @@
   3. Components
      3.1 btn-hamburger
 		 3.2 btn-dropdown
+		 3.3 col-img
+		 3.4 obj-fit
+		 3.5 obj-left
+		 3.6 text-title
   4. Layout
 		 4.1 logo
      4.2 navigation
 	5. Breakpoints
-		 5.1 large
+		 5.1 medium
+		 5.2 large
+		 5.3 xlarge
 
 ------------------------------ */
 
@@ -110,6 +116,26 @@ body {
 	text-decoration: underline;
 }
 
+/* ---- col-img ---- */
+.col-img {
+	height: 580px;
+}
+
+/* ---- obj-fit ---- */
+.obj-fit {
+	object-fit: cover;
+}
+
+/* ---- obj-left ---- */
+.obj-left {
+	object-position: 20%;
+}
+
+/* ---- text-title ---- */
+.text-title {
+	font-size: 2.2rem;
+}
+
 /* ===============
    Layout
 =============== */
@@ -170,6 +196,22 @@ body {
 /* ===============
 	 Breakpoints
 =============== */
+/* ---- medium ---- */
+@media screen and (max-width: 767px) {
+	.col-img {
+		padding-right: 0 !important;
+	}
+}
+@media screen and (min-width: 768px) {
+	.col-img {
+		height: 700px;
+	}
+
+	.obj-left {
+		object-position: 25%;
+	}
+}
+
 /* ---- large ---- */
 @media screen and (min-width: 992px) {
 	.btn-hamburger {
@@ -181,6 +223,14 @@ body {
 	}
 	.btn-dropdown::after {
 		display: inline-block;
+	}
+
+	.col-img {
+		height: 775px;
+	}
+
+	.text-title {
+		font-size: 3rem;
 	}
 
 	.navigation {
@@ -223,5 +273,21 @@ body {
 		top: 150%;
 		opacity: 1;
 		visibility: visible;
+	}
+}
+
+/* ---- xlarge ---- */
+@media screen and (max-width: 1199px) {
+	.col-img {
+		padding-left: 0 !important;
+	}
+}
+@media screen and (min-width: 1199px) {
+	.col-img {
+		height: 850px;
+	}
+
+	.text-title {
+		font-size: 3.5rem;
 	}
 }
