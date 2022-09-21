@@ -13,15 +13,18 @@
 		 3.6 text-title
 		 3.7 font-montserrat
 		 3.8 text-decoration-dashed
-		 3.9 w-md-80
+		 3.9 obj-top
+		 ++ px-lg-6
   4. Layout
 		 4.1 logo
      4.2 navigation
 		 4.3 container-sm-lower
+		 4.4 col-md-container
 	5. Breakpoints
 		 5.1 medium
 		 5.2 large
 		 5.3 xlarge
+		 5.4 xxlarge
 
 ------------------------------ */
 
@@ -40,6 +43,13 @@
 	font-weight: 400;
 	font-display: swap;
 	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+@font-face {
+	font-family: "Cormorant Garamond";
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
 }
 
 /* ---- Montserrat ---- */
@@ -123,6 +133,8 @@ body {
 /* ---- col-img ---- */
 .col-img {
 	height: 580px;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
 }
 
 /* ---- obj-fit ---- */
@@ -152,8 +164,10 @@ body {
 	text-decoration-style: dashed !important;
 }
 
-/* ---- w-md-80 ---- */
-/* .w-md-80 {} */
+/* ---- obj-top ---- */
+.obj-top {
+	object-position: center top;
+}
 
 /* ===============
    Layout
@@ -212,20 +226,13 @@ body {
 	display: flex;
 }
 
-/* ---- container-sm-lower ---- */
-/* .container-sm-lower {} */
-
 /* ===============
 	 Breakpoints
 =============== */
 /* ---- medium ---- */
 @media screen and (max-width: 767px) {
-	.col-img {
-		padding-right: 0 !important;
-	}
-
 	.container-sm-lower {
-		max-width: 516px;
+		max-width: 515px;
 		margin: 0 auto;
 	}
 }
@@ -238,8 +245,8 @@ body {
 		object-position: 25%;
 	}
 
-	.w-md-80 {
-		width: 80%;
+	.col-md-container {
+		max-width: 336px;
 	}
 }
 
@@ -262,6 +269,15 @@ body {
 
 	.text-title {
 		font-size: 3rem;
+	}
+
+	.px-lg-6 {
+		padding-right: 4rem !important;
+		padding-left: 4rem !important;
+	}
+
+	.col-md-container {
+		max-width: 416px;
 	}
 
 	.navigation {
@@ -308,17 +324,23 @@ body {
 }
 
 /* ---- xlarge ---- */
-@media screen and (max-width: 1199px) {
-	.col-img {
-		padding-left: 0 !important;
-	}
-}
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
 	.col-img {
 		height: 850px;
 	}
 
 	.text-title {
 		font-size: 3.5rem;
+	}
+
+	.col-md-container {
+		max-width: 506px;
+	}
+}
+
+/* ---- xxlarge ---- */
+@media screen and (min-width: 1400px) {
+	.col-md-container {
+		max-width: 595px;
 	}
 }
