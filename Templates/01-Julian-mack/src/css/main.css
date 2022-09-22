@@ -145,6 +145,7 @@ textarea {
 
 /* ---- btn-hamburger ---- */
 .btn-hamburger .bar {
+	display: block;
 	width: 24px;
 	height: 2px;
 	margin: 0.35rem 0;
