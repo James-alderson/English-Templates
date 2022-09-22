@@ -68,6 +68,13 @@
 /* ===============
    Base
 =============== */
+::selection {
+	background-color: hsl(210, 15%, 90%);
+}
+footer ::selection {
+	color: var(--bs-body-color);
+}
+
 body {
 	font-family: "Cormorant Garamond", serif;
 }
