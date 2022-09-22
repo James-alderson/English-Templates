@@ -31,6 +31,7 @@
 		 ++ large
 		 ++ xlarge
 		 ++ xxlarge
+	6. Reduced_motion
 
 ------------------------------ */
 
@@ -399,5 +400,22 @@ textarea {
 @media screen and (min-width: 1400px) {
 	.col-md-container {
 		max-width: 595px;
+	}
+}
+
+/* ===============
+	 Reduced_motion
+=============== */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
 	}
 }
