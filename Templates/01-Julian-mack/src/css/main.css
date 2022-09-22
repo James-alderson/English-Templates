@@ -71,6 +71,15 @@ body {
 	font-family: "Cormorant Garamond", serif;
 }
 
+label abbr {
+	text-decoration: none !important;
+}
+
+input,
+textarea {
+	font-size: 0.88rem !important;
+}
+
 /* ===============
    Components
 =============== */
