@@ -1,35 +1,35 @@
 /* ------ Table of content ------
 
   1. Fonts
-     1.1 Cormorant Garamond
-     1.2 Montserrat
+     ++ Cormorant Garamond
+     ++ Montserrat
   2. Base
   3. Components
-     3.1 btn-hamburger
-		 3.2 btn-dropdown
-		 3.3 col-img
-		 3.4 obj-fit
-		 3.5 obj-left
-		 3.6 text-title
-		 3.7 font-montserrat
-		 3.8 text-decoration-dashed
-		 3.9 obj-top
-		 ++ px-lg-6
-		 ++ h-305px
+		 ++ btn-dropdown
+     ++ btn-hamburger
+		 ++ col-img
+		 ++ obj-fit
+		 ++ obj-top
 		 ++ obj-bottom
-		 ++ obj-left-25
 		 ++ obj-bottom-80
+		 ++ obj-left
+		 ++ obj-left-25
+		 ++ text-title
+		 ++ h-300px
+		 ++ px-lg-6
+		 ++ font-montserrat
 		 ++ font-Cormorant_Garamond
+		 ++ text-decoration-dashed
   4. Layout
-		 4.1 logo
-     4.2 navigation
-		 4.3 container-sm-lower
-		 4.4 col-md-container
+		 ++ logo
+     ++ navigation
+		 ++ container-sm-lower
+		 ++ col-md-container
 	5. Breakpoints
-		 5.1 medium
-		 5.2 large
-		 5.3 xlarge
-		 5.4 xxlarge
+		 ++ medium
+		 ++ large
+		 ++ xlarge
+		 ++ xxlarge
 
 ------------------------------ */
 
@@ -102,24 +102,6 @@ textarea {
 /* ===============
    Components
 =============== */
-/* ---- btn-hamburger ---- */
-.btn-hamburger .bar {
-	width: 24px;
-	height: 2px;
-	margin: 0.35rem 0;
-	transition: transform 0.25s ease-out;
-	background-color: var(--bs-black);
-}
-.btn-hamburger.changed .bar-1 {
-	transform: translate(0, 8px) rotate(-45deg);
-}
-.btn-hamburger.changed .bar-2 {
-	opacity: 0;
-}
-.btn-hamburger.changed .bar-3 {
-	transform: translate(0, -7px) rotate(45deg);
-}
-
 /* ---- btn-dropdown ---- */
 .btn-dropdown {
 	padding: 0;
@@ -161,6 +143,24 @@ textarea {
 	text-decoration: underline;
 }
 
+/* ---- btn-hamburger ---- */
+.btn-hamburger .bar {
+	width: 24px;
+	height: 2px;
+	margin: 0.35rem 0;
+	transition: transform 0.25s ease-out;
+	background-color: var(--bs-black);
+}
+.btn-hamburger.changed .bar-1 {
+	transform: translate(0, 8px) rotate(-45deg);
+}
+.btn-hamburger.changed .bar-2 {
+	opacity: 0;
+}
+.btn-hamburger.changed .bar-3 {
+	transform: translate(0, -7px) rotate(45deg);
+}
+
 /* ---- col-img ---- */
 .col-img {
 	height: 580px;
@@ -171,6 +171,21 @@ textarea {
 /* ---- obj-fit ---- */
 .obj-fit {
 	object-fit: cover;
+}
+
+/* ---- obj-top ---- */
+.obj-top {
+	object-position: center top;
+}
+
+/* ---- obj-bottom ---- */
+.obj-bottom {
+	object-position: center bottom;
+}
+
+/* ---- obj-bottom-80 ---- */
+.obj-bottom-80 {
+	object-position: center 80%;
 }
 
 /* ---- obj-left ---- */
@@ -188,9 +203,19 @@ textarea {
 	font-size: 2.2rem;
 }
 
+/* ---- h-300px ---- */
+.h-300px {
+	height: 300px;
+}
+
 /* ---- font-montserrat ---- */
 .font-montserrat {
 	font-family: "Montserrat", sans-serif !important;
+}
+
+/* ---- font-Cormorant_Garamond ---- */
+.font-Cormorant_Garamond {
+	font-family: "Cormorant Garamond", serif !important;
 }
 
 /* ---- text-decoration-dashed ---- */
@@ -198,31 +223,6 @@ textarea {
 	text-underline-offset: 2px !important;
 	text-decoration-thickness: 1px !important;
 	text-decoration-style: dashed !important;
-}
-
-/* ---- obj-top ---- */
-.obj-top {
-	object-position: center top;
-}
-
-/* ---- h-305px ---- */
-.h-305px {
-	height: 305px;
-}
-
-/* ---- obj-bottom ---- */
-.obj-bottom {
-	object-position: center bottom;
-}
-
-/* ---- obj-bottom-80 ---- */
-.obj-bottom-80 {
-	object-position: center 80%;
-}
-
-/* ---- font-Cormorant_Garamond ---- */
-.font-Cormorant_Garamond {
-	font-family: "Cormorant Garamond", serif !important;
 }
 
 /* ===============
@@ -303,15 +303,15 @@ textarea {
 
 /* ---- large ---- */
 @media screen and (min-width: 992px) {
-	.btn-hamburger {
-		display: none;
-	}
-
 	.btn-dropdown::before {
 		display: none;
 	}
 	.btn-dropdown::after {
 		display: inline-block;
+	}
+
+	.btn-hamburger {
+		display: none;
 	}
 
 	.col-img {
