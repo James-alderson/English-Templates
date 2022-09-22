@@ -15,6 +15,7 @@
 		 ++ obj-left
 		 ++ obj-left-25
 		 ++ text-title
+		 ++ text-danger
 		 ++ h-300px
 		 ++ px-lg-6
 		 ++ font-montserrat
@@ -202,6 +203,10 @@ textarea {
 /* ---- text-title ---- */
 .text-title {
 	font-size: 2.2rem;
+}
+
+.bg-light .text-danger {
+	color: hsl(354, 71%, 51%) !important;
 }
 
 /* ---- h-300px ---- */
