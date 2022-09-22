@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Alderson">
+  <meta name="description" content="Pictures can be worth a thousand words, but they lose their worth without context.">
+
+  <title>Fashion week coverage</title>
+  <!-- Bootstrap v5.2.1 -->
+  <link rel="stylesheet" href="src/css/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/navbar-menu.js" defer></script>
+  <script src="src/js/dropdown.js" defer></script>
+  <!-- Fonts -->
+  <link rel="preload" href="src/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="src/fonts/Montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/src/images/favicon/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/src/images/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/src/images/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/src/images/favicon/site.webmanifest">
+</head>
+<body>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar bg-light py-4">
+      <div class="container-xl">
+        <a href="index.html">
+          <img src="src/images/svg/logo.svg" alt="Julian Mack logo" class="logo">
+        </a>
+  
+        <button id="btnHamburger" class="btn btn-hamburger" aria-label="menu_button">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+  
+        <div id="navigation" class="navigation py-3 py-lg-0 px-3 px-lg-0">
+          <div id="navigationDropdown" class="navigation-dropdown">
+            <button id="btnDropdown" class="btn-dropdown font-Cormorant_Garamond">Work</button>
+            <div id="dropdownContent" class="dropdown__content px-4 py-2 py-lg-3">
+              <a class="text-decoration-underline" href="fashion-week-coverage.html">Fashion week coverage</a>
+              <a href="#">Hot rod race week coverage</a>
+            </div>
+          </div>
+          <a href="#">About Me</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Showcase -->
+    <section class="mb-5 pb-5">
+      <div class="container-xl">
+        <div class="row align-items-center flex-md-row-reverse">
+          <div class="col-12 col-md-6 col-img">
+            <img class="img-fluid h-100 obj-fit" src="src/images/flaunter-RC7bYyG5PUs-unsplash.jpg"
+            alt="fashion communication and promotion">
+          </div>
+          <div class="col-12 col-md-6 mt-4 mt-md-0 pe-md-4 pe-lg-5">
+            <div class="container-sm-lower">
+              <div class="h6 text-danger font-montserrat text-uppercase text-decoration-underline text-decoration-dashed mb-4">
+                Fashion week coverage</div>
+              <h1 class="text-danger text-title mb-3">Pictures can be worth a thousand words, but they lose their worth without context.</h1>
+              <p class="lead fw-normal mb-4">This assignment led me to one of Italy’s famous fashion week events, mingling with star designers, and top models. Those with a keen eye for aesthetics need more than just a pretty picture. That’s where I came in.</p>
+              <p class="lead fw-normal">During my coverage, I conducted in-depth interviews with designers, talking about their inspirations and messages. Additionally, I worked to provide context on the history of the event and why it is important for the industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other_work -->
+    <div class="bg-light my-5 py-5">
+      <div class="container-sm">
+        <div class="px-md-4 px-lg-6">
+          <div class="row flex-md-row-reverse">
+            <div class="col-12 col-md mb-5 mb-md-0 ps-md-4 ps-lg-5">
+              <div class="h6 text-danger font-montserrat text-uppercase text-decoration-underline text-decoration-dashed mb-4">
+                My other work</div>
+              <a class="h1 text-danger text-title" href="#">Hot rod race week coverage</a>
+            </div>
+            <div class="col-12 col-md">
+              <a href="#" tabindex="-1">
+                <img class="img-fluid w-100 h-300px obj-fit obj-bottom-80" src="src/images/artem-lyapin-DBPXkjmPU2I-unsplash.jpg" alt="grayscale photo of vintage car photo">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="my-5 py-5">
+      <div class="container-sm">
+        <div class="px-md-4 px-lg-6">
+          <div class="row">
+            <div class="col-12 col-md mb-4 mb-md-0">
+              <div class="h1 text-danger text-title">Interested? Let’s get in touch.</div>
+            </div>
+            <div class="col-12 col-md">
+              <form class="font-montserrat">
+                <div class="mb-3">
+                  <label for="name">Name<abbr title="Require">*</abbr></label>
+                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name" placeholder="Your name"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label for="email">Your email<abbr title="Require">*</abbr></label>
+                  <input id="email" class="form-control rounded-0 bg-light" type="email" name="email"
+                    placeholder="Your email address" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message">Message<abbr title="Require">*</abbr></label>
+                  <textarea id="message" class="form-control rounded-0 bg-light" name="message" rows="5"
+                    placeholder="Enter your message" required></textarea>
+                </div>
+                <button class="btn btn-outline-dark rounded-0" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-danger text-white mt-5 py-5">
+    <!-- Social_media -->
+    <div class="container-sm">
+      <div class="px-md-4 px-lg-6">
+        <div class="font-montserrat">You can also find me on</div>
+        <div class="d-flex gap-3 mt-3">
+          <a class="text-decoration-none" href="#">
+            <img class="d-block" src="src/images/svg/social-media/twitter.svg" alt="twitter" width="20" height="20">
+          </a>
+          <a class="text-decoration-none" href="#">
+            <img class="d-block" src="src/images/svg/social-media/facebook.svg" alt="facebook" width="20" height="20">
+          </a>
+          <a class="text-decoration-none" href="#">
+            <img class="d-block" src="src/images/svg/social-media/instagram.svg" alt="instagram" width="20" height="20">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
