@@ -15,6 +15,10 @@
 		 3.8 text-decoration-dashed
 		 3.9 obj-top
 		 ++ px-lg-6
+		 ++ h-305px
+		 ++ obj-bottom
+		 ++ obj-left-25
+		 ++ obj-bottom-80
   4. Layout
 		 4.1 logo
      4.2 navigation
@@ -144,7 +148,12 @@ body {
 
 /* ---- obj-left ---- */
 .obj-left {
-	object-position: 20%;
+	object-position: center left;
+}
+
+/* ---- obj-left-25 ---- */
+.obj-left-25 {
+	object-position: 25% center;
 }
 
 /* ---- text-title ---- */
@@ -167,6 +176,21 @@ body {
 /* ---- obj-top ---- */
 .obj-top {
 	object-position: center top;
+}
+
+/* ---- h-305px ---- */
+.h-305px {
+	height: 305px;
+}
+
+/* ---- obj-bottom ---- */
+.obj-bottom {
+	object-position: center bottom;
+}
+
+/* ---- obj-bottom-80 ---- */
+.obj-bottom-80 {
+	object-position: center 80%;
 }
 
 /* ===============
@@ -239,10 +263,6 @@ body {
 @media screen and (min-width: 768px) {
 	.col-img {
 		height: 700px;
-	}
-
-	.obj-left {
-		object-position: 25%;
 	}
 
 	.col-md-container {
