@@ -19,6 +19,7 @@
 		 ++ obj-bottom
 		 ++ obj-left-25
 		 ++ obj-bottom-80
+		 ++ font-Cormorant_Garamond
   4. Layout
 		 4.1 logo
      4.2 navigation
@@ -71,6 +72,17 @@ body {
 	font-family: "Cormorant Garamond", serif;
 }
 
+a {
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+	font-family: "Montserrat", sans-serif !important;
+}
+
 label abbr {
 	text-decoration: none !important;
 }
@@ -105,7 +117,6 @@ textarea {
 .btn-dropdown {
 	padding: 0;
 	border: none;
-	text-underline-offset: 5px;
 	background-color: transparent;
 }
 
@@ -172,7 +183,7 @@ textarea {
 
 /* ---- font-montserrat ---- */
 .font-montserrat {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", sans-serif !important;
 }
 
 /* ---- text-decoration-dashed ---- */
@@ -200,6 +211,11 @@ textarea {
 /* ---- obj-bottom-80 ---- */
 .obj-bottom-80 {
 	object-position: center 80%;
+}
+
+/* ---- font-Cormorant_Garamond ---- */
+.font-Cormorant_Garamond {
+	font-family: "Cormorant Garamond", serif !important;
 }
 
 /* ===============
@@ -236,7 +252,6 @@ textarea {
 .navigation a {
 	color: var(--bs-black);
 	text-decoration: none;
-	text-underline-offset: 6px;
 }
 .navigation a:hover,
 .navigation a:focus {
