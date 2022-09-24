@@ -71,7 +71,7 @@
    Base
 =============== */
 ::selection {
-	background-color: hsl(210, 15%, 90%);
+	background-color: hsl(210, 15%, 85%);
 }
 footer ::selection {
 	color: var(--bs-body-color);
@@ -79,11 +79,6 @@ footer ::selection {
 
 body {
 	font-family: "Cormorant Garamond", serif;
-}
-
-a {
-	text-underline-offset: 2px;
-	text-decoration-thickness: 1px;
 }
 
 button,
