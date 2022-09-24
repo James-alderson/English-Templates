@@ -11,6 +11,7 @@
   <!-- Bootstrap v5.2.1 -->
   <link rel="stylesheet" href="src/css/vendors/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/lazy-load.js" defer></script>
   <script src="src/js/navbar-menu.js" defer></script>
   <script src="src/js/dropdown.js" defer></script>
   <!-- Fonts -->
@@ -31,15 +32,13 @@
     <nav class="navbar bg-light py-4">
       <div class="container-xl">
         <a href="index.html">
-          <img src="src/images/svg/logo.svg" alt="Julian Mack logo" class="logo">
+          <img class="logo" src="src/images/svg/logo.svg" alt="Julian Mack logo">
         </a>
-  
         <button id="btnHamburger" class="btn btn-hamburger" aria-label="menu_button">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
           <span class="bar bar-3"></span>
         </button>
-  
         <div id="navigation" class="navigation py-3 py-lg-0 px-3 px-lg-0">
           <div id="navigationDropdown" class="navigation-dropdown">
             <button id="btnDropdown" class="btn-dropdown font-Cormorant_Garamond">Work</button>
@@ -61,16 +60,23 @@
       <div class="container-xl">
         <div class="row align-items-center flex-md-row-reverse">
           <div class="col-12 col-md-6 col-img">
-            <img class="w-100 h-100 obj-fit" src="src/images/tyler-nix-FmLGMw7moSU-unsplash.jpg"
-            alt="man sitting on table in front of table wriing on paper photo">
+            <img class="w-100 h-100 obj-fit"
+              src="src/images/LQIP/tyler-nix-FmLGMw7moSU-unsplash.jpg"
+              data-src="src/images/tyler-nix-FmLGMw7moSU-unsplash.jpg"
+              alt="man sitting on table in front of table wriing on paper photo">
           </div>
           <div class="col-12 col-md-6 mt-4 mt-md-0 pe-md-4 pe-lg-5">
             <div class="container-sm-lower">
               <div class="h6 text-danger font-montserrat text-uppercase text-decoration-underline text-decoration-dashed mb-4">
                 Get to know me</div>
               <h1 class="text-danger text-title mb-3">Integrity in coverage, flexibility in writing</h1>
-              <p class="lead fw-normal my-4">My love affair with written media started very early; growing up in the countryside does that to a person. As a kid, when there’s no cable TV, you either play outside or read. I chose the latter. Starting with books and newspaper comics, I ended up reading papers from the front page to the last page, and tried my hand at writing for the school paper.</p>
-              <p class="lead fw-normal my-4">By the time I finished school I knew this is what I wanted to do for a living. I wrote for small publications while working on my bachelor, and got freelance gigs while doing my master’s. The rest is history.</p>
+              <p class="lead fw-normal my-4">My love affair with written media started very early; growing up in the
+                countryside does that to a person. As a kid, when there’s no cable TV, you either play outside or read.
+                I chose the latter. Starting with books and newspaper comics, I ended up reading papers from the front
+                page to the last page, and tried my hand at writing for the school paper.</p>
+              <p class="lead fw-normal my-4">By the time I finished school I knew this is what I wanted to do for a
+                living. I wrote for small publications while working on my bachelor, and got freelance gigs while doing
+                my master’s. The rest is history.</p>
               <a class="btn btn-outline-dark rounded-0 font-montserrat" href="contact.html" role="button">Get in touch</a>
             </div>
           </div>
@@ -83,7 +89,9 @@
       <div class="container-xl mb-md-5 pb-md-5">
         <div class="row align-items-center">
           <div class="col-12 col-md-6 col-img">
-            <img class="w-100 h-100 obj-fit" src="src/images/lory-qCpWViCYYiA-unsplash.jpg"
+            <img class="w-100 h-100 obj-fit"
+              src="src/images/LQIP/lory-qCpWViCYYiA-unsplash.jpg"
+              data-src="src/images/lory-qCpWViCYYiA-unsplash.jpg"
               alt="white and red house on green grass field under blue sky during daytime photo">
           </div>
           <div class="col-12 col-md-6 col-md-container mt-4 mt-md-0 ps-md-4 ps-lg-5">
@@ -106,14 +114,18 @@
               <div class="col-12 col-md mb-5 mb-md-0">
                 <a href="fashion-week-coverage.html" tabindex="-1">
                   <img class="w-100 h-300px obj-fit obj-left-25"
-                    src="src/images/flaunter-RC7bYyG5PUs-unsplash.jpg" alt="fashion communication and promotion">
+                    src="src/images/LQIP/flaunter-RC7bYyG5PUs-unsplash.jpg"
+                    data-src="src/images/flaunter-RC7bYyG5PUs-unsplash.jpg"
+                    alt="fashion communication and promotion">
                 </a>
                 <a class="text-dark fs-3 fw-normal" href="fashion-week-coverage.html">Fashion week coverage</a>
               </div>
               <div class="col-12 col-md">
                 <a href="hot-rod-race-week-coverage.html" tabindex="-1">
                   <img class="w-100 h-300px obj-fit obj-bottom-80"
-                    src="src/images/artem-lyapin-DBPXkjmPU2I-unsplash.jpg" alt="grayscale photo of vintage car photo">
+                    src="src/images/LQIP/artem-lyapin-DBPXkjmPU2I-unsplash.jpg"
+                    data-src="src/images/artem-lyapin-DBPXkjmPU2I-unsplash.jpg"
+                    alt="grayscale photo of vintage car photo">
                 </a>
                 <a class="text-dark fs-3" href="hot-rod-race-week-coverage.html">Hot rod race week coverage</a>
               </div>
@@ -135,8 +147,8 @@
               <form class="font-montserrat">
                 <div class="mb-3">
                   <label for="name">Name<abbr title="Require">*</abbr></label>
-                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name" placeholder="Your name"
-                    required>
+                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name"
+                    placeholder="Your name" required>
                 </div>
                 <div class="mb-3">
                   <label for="email">Your email<abbr title="Require">*</abbr></label>

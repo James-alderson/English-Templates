@@ -11,6 +11,7 @@
   <!-- Bootstrap v5.2.1 -->
   <link rel="stylesheet" href="src/css/vendors/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/lazy-load.js" defer></script>
   <script src="src/js/navbar-menu.js" defer></script>
   <script src="src/js/dropdown.js" defer></script>
   <!-- Fonts -->
@@ -31,15 +32,13 @@
     <nav class="navbar bg-light py-4">
       <div class="container-xl">
         <a href="index.html">
-          <img src="src/images/svg/logo.svg" alt="Julian Mack logo" class="logo">
+          <img class="logo" src="src/images/svg/logo.svg" alt="Julian Mack logo">
         </a>
-  
         <button id="btnHamburger" class="btn btn-hamburger" aria-label="menu_button">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
           <span class="bar bar-3"></span>
         </button>
-  
         <div id="navigation" class="navigation py-3 py-lg-0 px-3 px-lg-0">
           <div id="navigationDropdown" class="navigation-dropdown">
             <button id="btnDropdown" class="btn-dropdown font-Cormorant_Garamond">Work</button>
@@ -61,16 +60,22 @@
       <div class="container-xl">
         <div class="row align-items-center flex-md-row-reverse">
           <div class="col-12 col-md-6 col-img">
-            <img class="w-100 h-100 obj-fit obj-bottom-80" src="src/images/artem-lyapin-DBPXkjmPU2I-unsplash.jpg"
-            alt="grayscale photo of vintage car photo">
+            <img class="w-100 h-100 obj-fit obj-bottom-80"
+              src="src/images/LQIP/artem-lyapin-DBPXkjmPU2I-unsplash.jpg"
+              data-src="src/images/artem-lyapin-DBPXkjmPU2I-unsplash.jpg"
+              alt="grayscale photo of vintage car photo">
           </div>
           <div class="col-12 col-md-6 mt-4 mt-md-0 pe-md-4 pe-lg-5">
             <div class="container-sm-lower">
               <div class="h6 text-danger font-montserrat text-uppercase text-decoration-underline text-decoration-dashed mb-4">
                 Hot rod race week coverage</div>
               <h1 class="text-danger text-title mb-3">The inner working of an elite driver’s mind.</h1>
-              <p class="lead fw-normal my-4">While covering the annual hot rod race week event, my goal was to add history and personality to the names spread across the race leaderboards. Talking to some of the best drivers in their respective categories, interviewing their pit crews, discussing strategies, and thoughts was my job.</p>
-              <p class="lead fw-normal my-4">Seeing someone take a corner to narrowly avoid a crash is one thing. Getting insights on what was going through their heads is another. What a thrilling experience.</p>
+              <p class="lead fw-normal my-4">While covering the annual hot rod race week event, my goal was to add
+                history and personality to the names spread across the race leaderboards. Talking to some of the best
+                drivers in their respective categories, interviewing their pit crews, discussing strategies, and
+                thoughts was my job.</p>
+              <p class="lead fw-normal my-4">Seeing someone take a corner to narrowly avoid a crash is one thing.
+                Getting insights on what was going through their heads is another. What a thrilling experience.</p>
             </div>
           </div>
         </div>
@@ -89,7 +94,10 @@
             </div>
             <div class="col-12 col-md">
               <a href="fashion-week-coverage.html" tabindex="-1">
-                <img class="w-100 h-300px obj-fit obj-left-25" src="src/images/flaunter-RC7bYyG5PUs-unsplash.jpg" alt="fashion communication and promotion">
+                <img class="w-100 h-300px obj-fit obj-left-25"
+                  src="src/images/LQIP/flaunter-RC7bYyG5PUs-unsplash.jpg"
+                  data-src="src/images/flaunter-RC7bYyG5PUs-unsplash.jpg"
+                  alt="fashion communication and promotion">
               </a>
             </div>
           </div>
@@ -109,8 +117,8 @@
               <form class="font-montserrat">
                 <div class="mb-3">
                   <label for="name">Name<abbr title="Require">*</abbr></label>
-                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name" placeholder="Your name"
-                    required>
+                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name"
+                    placeholder="Your name" required>
                 </div>
                 <div class="mb-3">
                   <label for="email">Your email<abbr title="Require">*</abbr></label>

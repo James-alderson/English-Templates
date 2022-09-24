@@ -11,6 +11,7 @@
   <!-- Bootstrap v5.2.1 -->
   <link rel="stylesheet" href="src/css/vendors/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/lazy-load.js" defer></script>
   <script src="src/js/navbar-menu.js" defer></script>
   <script src="src/js/dropdown.js" defer></script>
   <!-- Fonts -->
@@ -31,15 +32,13 @@
     <nav class="navbar bg-light py-4">
       <div class="container-xl">
         <a href="index.html">
-          <img src="src/images/svg/logo.svg" alt="Julian Mack logo" class="logo">
+          <img class="logo" src="src/images/svg/logo.svg" alt="Julian Mack logo">
         </a>
-  
         <button id="btnHamburger" class="btn btn-hamburger" aria-label="menu_button">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
           <span class="bar bar-3"></span>
         </button>
-  
         <div id="navigation" class="navigation py-3 py-lg-0 px-3 px-lg-0">
           <div id="navigationDropdown" class="navigation-dropdown">
             <button id="btnDropdown" class="btn-dropdown font-Cormorant_Garamond">Work</button>
@@ -70,8 +69,8 @@
               <form class="font-montserrat">
                 <div class="mb-3">
                   <label for="name">Name<abbr title="Require">*</abbr></label>
-                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name" placeholder="Your name"
-                    required>
+                  <input id="name" class="form-control rounded-0 bg-light" type="text" name="name"
+                    placeholder="Your name" required>
                 </div>
                 <div class="mb-3">
                   <label for="email">Your email<abbr title="Require">*</abbr></label>
