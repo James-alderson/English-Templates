@@ -62,7 +62,8 @@ function copyImage_task() {
   return src([
     "src/images/LQIP/*",
     "src/images/favicon/*",
-    "src/images/svg/**/*"], { "base": "./src/images" })
+    "src/images/svg/**/*",
+    "src/images/screenshot/*"], { "base": "./src/images" })
     .pipe(dest("dist/images"))
 }
 

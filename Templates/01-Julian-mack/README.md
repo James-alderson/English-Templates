@@ -1,8 +1,40 @@
 # Julian Mack
 
-## Description
-
 Julian Mack – Changing the world one headline at a time.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Getting started](#getting-started)
+  - [Development dependencies](#development-dependencies)
+  - [Installing](#installing)
+    - [Edit or development](#edit-or-development)
+- [Author](#author)
+
+## Overview
+
+### Screenshot
+
+![](dist/images/screenshot/Julian_Mack.png)
+
+### Links
+
+- Live Site URL: [live Site](https://james-alderson.github.io/English-Templates/Templates/01-Julian-mack/index.html)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Flexbox
+- Mobile-first workflow
+- [BEM](https://en.bem.info/methodology/) - Methodology
+- [gulp](https://gulpjs.com/) - Task runner
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
 
 ## Getting Started
 
