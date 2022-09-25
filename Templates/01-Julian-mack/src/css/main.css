@@ -43,20 +43,20 @@
 	font-family: "Cormorant Garamond";
 	font-weight: 500;
 	font-display: swap;
-	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf);
+	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Medium.woff);
 }
 @font-face {
 	font-family: "Cormorant Garamond";
 	font-weight: 400;
 	font-display: swap;
-	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Regular.woff);
 }
 @font-face {
 	font-family: "Cormorant Garamond";
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
-	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
+	src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Italic.woff);
 }
 
 /* ---- Montserrat ---- */
@@ -64,7 +64,7 @@
 	font-family: "Montserrat";
 	font-weight: 400;
 	font-display: swap;
-	src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+	src: url(../fonts/Montserrat/Montserrat-Regular.woff);
 }
 
 /* ===============
