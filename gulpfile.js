@@ -13,7 +13,10 @@ const files = {
   cssPath: "src/css/*.css",
 }
 
-// Css task
+/* Css task
+    1. Add vendor prefixes
+    2. Minify css
+============ */
 function css_task() {
   return src(files.cssPath)
     .pipe(postcss([autoprefixer("last 4 versions"), cssnano()]))
@@ -29,16 +32,16 @@ function cachebust_task() {
     .pipe(dest("."))
 }
 
-// CopyCss task
+// CopyCss vendors task
 function copyCss_task() {
-  return src("src/css/vendors/**/*")
-    .pipe(dest("dist/css/vendors"))
+  return src(["src/css/vendors/**/*"], { "base": "src/css" })
+    .pipe(dest("dist/css"))
 }
 
 // CopyImage task
 function copyImage_task() {
-  return src("src/images/favicon/*")
-    .pipe(dest("dist/images/favicon"))
+  return src(["src/images/favicon/*"], { "base": "src/images" })
+    .pipe(dest("dist/images"))
 }
 
 // Initialize browserSync
