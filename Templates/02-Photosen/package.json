@@ -1,0 +1,32 @@
+{
+  "name": "photosen",
+  "version": "1.0.0",
+  "description": "Photosen photography team, Here you can see a series of the team's portfolios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./docs/css/main.css",
+    "clean": "prettier ./src/*.html --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/English-Templates.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "tailwind",
+    "webpack"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/English-Templates/issues"
+  },
+  "homepage": "https://github.com/James-alderson/English-Templates/tree/main/Templates/02-Photosen#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.3"
+  }
+}
