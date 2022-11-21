@@ -11,7 +11,155 @@
     <meta name="theme-color" content="#000000" />
 
     <title>Photosen</title>
-    <link rel="stylesheet" href="../docs/css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/navigation.js" defer></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="./icons/boxicons/boxicons.css" />
+    <link rel="stylesheet" href="./icons/flaticon/flaticon.css" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      href="./images/favicon/apple-touch-icon.png"
+      sizes="180x180" />
+    <link
+      rel="icon"
+      href="./images/favicon/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32" />
+    <link
+      rel="icon"
+      href="./images/favicon/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16" />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
   </head>
-  <body class="bg-black"></body>
+  <body class="bg-neutral-900 text-white">
+    <header class="relative top-[-112px] py-9 px-4 opacity-0">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-3xl font-medium lg:text-4xl">
+          <a href="./index.html">Photosen</a>
+        </h1>
+        <button id="openMenu" class="link-color text-3xl leading-[0] xl:hidden">
+          <i class="boxicons-menu inline-flex"></i>
+        </button>
+        <!-- Slide navigation -->
+        <div
+          id="slideNavigation"
+          class="fixed inset-y-0 right-0 z-20 bg-white py-6 text-xl text-gray-900 xl:static xl:w-4/6 xl:bg-transparent xl:p-0 xl:text-xs xl:text-neutral-400 xl:transition-none">
+          <button
+            id="closeMenu"
+            class="link-color absolute top-6 right-6 text-4xl leading-[0] xl:hidden">
+            <i class="boxicons-x inline-flex"></i>
+          </button>
+          <nav
+            class="mt-16 overflow-y-scroll border-t px-8 pt-8 pb-20 xl:mt-0 xl:flex xl:items-center xl:justify-between xl:overflow-y-visible xl:border-0 xl:p-0 xl:shadow-none">
+            <div
+              class="flex flex-col xl:flex-row [&>a]:mt-6 xl:[&>a]:mt-0 xl:[&>a]:ml-8 xl:[&>a]:uppercase xl:[&>a]:tracking-widest [&>a:first-of-type]:m-0">
+              <a class="text-emerald-400" href="./index.html">Home</a>
+              <!-- Dropdown -->
+              <div class="dropdown mt-6 xl:relative xl:mt-0 xl:ml-6">
+                <button
+                  class="dropdown-btn link-color inline-flex w-full items-center justify-between xl:relative xl:w-[initial] xl:uppercase xl:tracking-widest">
+                  Gallery
+                  <i
+                    class="boxicons-chevron-down inline-flex rounded-full p-1 xl:absolute xl:right-[-1rem] xl:p-0 xl:text-base"></i>
+                </button>
+                <div
+                  class="dropdown-content max-h-0 overflow-hidden xl:invisible xl:absolute xl:left-0 xl:top-[300%] xl:mt-4 xl:max-h-[initial!important] xl:min-w-[200px] xl:overflow-visible xl:border-t-2 xl:border-emerald-400 xl:bg-white xl:opacity-0">
+                  <div
+                    class="flex flex-col pt-4 pl-4 xl:p-0 [&>a]:mt-4 xl:[&>a]:mt-0 xl:[&>a]:py-2.5 xl:[&>a]:px-5 [&>a:first-of-type]:mt-0 [&>*]:text-base xl:[&>*]:text-gray-900">
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Nature</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Portrait</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >People</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Architecture</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Animals</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Sports</a
+                    >
+                    <a
+                      class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                      href="#"
+                      >Travel</a
+                    >
+                    <!-- Dropdown -->
+                    <div class="dropdown mt-4 xl:relative xl:mt-0">
+                      <button
+                        class="dropdown-btn link-color inline-flex w-full items-center justify-between xl:w-full xl:py-2.5 xl:px-5 xl:hover:bg-gray-100 xl:focus:bg-gray-100">
+                        Sub Menu
+                        <i
+                          class="boxicons-chevron-down inline-flex rounded-full p-1 text-xl xl:p-0 xl:text-base"></i>
+                      </button>
+                      <div
+                        class="dropdown-content max-h-0 overflow-hidden xl:absolute xl:right-[-100%] xl:top-full xl:max-h-[initial!important] xl:min-w-[200px] xl:overflow-visible xl:overflow-visible xl:border-t-2 xl:border-emerald-400 xl:bg-white xl:opacity-0">
+                        <div
+                          class="flex flex-col pt-4 pl-4 xl:p-0 [&>a]:mt-4 xl:[&>a]:m-0 xl:[&>a]:py-2.5 xl:[&>a]:px-5 [&>a:first-of-type]:mt-0">
+                          <a
+                            class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                            href="#"
+                            >Menu One</a
+                          >
+                          <a
+                            class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                            href="#"
+                            >Menu Two</a
+                          >
+                          <a
+                            class="link-color xl:hover:bg-gray-100 xl:focus:bg-gray-100"
+                            href="#"
+                            >Menu Three</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="link-color" href="#">Services</a>
+              <a class="link-color" href="#">About</a>
+              <a class="link-color" href="#">Contact</a>
+            </div>
+            <div
+              class="mt-12 flex text-2xl xl:mt-0 xl:text-lg [&>a]:ml-6 [&>a]:p-1 xl:[&>a]:ml-3 [&>a:first-of-type]:ml-0">
+              <a class="link-color leading-[0]" href="#">
+                <i class="boxicons-facebook inline-flex"></i>
+              </a>
+              <a class="link-color leading-[0]" href="#">
+                <i class="boxicons-twitter inline-flex"></i>
+              </a>
+              <a class="link-color leading-[0]" href="#">
+                <i class="boxicons-instagram inline-flex"></i>
+              </a>
+              <a class="link-color leading-[0]" href="#">
+                <i class="boxicons-youtube inline-flex"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Shadow -->
+      <div id="shadow" class="fixed inset-0 h-full w-full"></div>
+    </header>
+  </body>
 </html>

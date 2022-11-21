@@ -4,8 +4,9 @@
   "description": "Photosen photography team, Here you can see a series of the team's portfolios",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./docs/css/main.css",
-    "clean": "prettier ./src/*.html --write"
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css --watch",
+    "clean": "prettier --write ./src/**/*"
   },
   "repository": {
     "type": "git",

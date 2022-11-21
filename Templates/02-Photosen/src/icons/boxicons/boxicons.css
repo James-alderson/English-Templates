@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Boxicons';
+  src: url('./font/boxicons.eot') format('eot'),
+    url('./font/boxicons.ttf') format('ttf'),
+    url('./font/boxicons.woff') format('woff'),
+    url('./font/boxicons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='boxicons-']:before,
+[class*=' boxicons-']:before,
+[class^='boxicons-']:after,
+[class*=' boxicons-']:after {
+  font-family: 'Boxicons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.boxicons-chevron-down:before {
+  content: '\e900';
+}
+.boxicons-facebook:before {
+  content: '\e901';
+}
+.boxicons-heart:before {
+  content: '\e902';
+}
+.boxicons-instagram:before {
+  content: '\e903';
+}
+.boxicons-menu:before {
+  content: '\e904';
+}
+.boxicons-twitter:before {
+  content: '\e905';
+}
+.boxicons-x:before {
+  content: '\e906';
+}
+.boxicons-youtube:before {
+  content: '\e907';
+}

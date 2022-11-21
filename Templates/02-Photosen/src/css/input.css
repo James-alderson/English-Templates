@@ -1,3 +1,183 @@
+/* ------ Table of content ------
+
+1. Import tailwind styles
+2. Import fonts
+   ++ Josefin_Sans
+3. Base styles
+4. Layout
+   ++ slideNavigation
+   ++ dropdown
+   ++ shadow
+
+------------------------------ */
+
+/* =========================
+   Import tailwind styles
+========================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .link-color {
+    transition: color 0.25s ease-out;
+  }
+
+  .link-color:hover,
+  .link-color:focus {
+    color: hsl(158, 64%, 52%);
+  }
+}
+
+/* ===============
+   Import fonts
+=============== */
+/* ----- Josefin_Sans ----- */
+@font-face {
+  font-family: 'Josefin_Sans';
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/Josefin_Sans/JosefinSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Josefin_Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Josefin_Sans/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Josefin_Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: url(../fonts/Josefin_Sans/JosefinSans-Light.ttf);
+}
+
+/* ===============
+   Base styles
+=============== */
+body {
+  font-family: 'Josefin_Sans', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+nav {
+  height: calc(100% - 40px);
+  box-shadow: 0px 20px 10px rgba(229, 231, 235, 0.35) inset;
+}
+
+/* ===============
+   Layout
+=============== */
+header {
+  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+}
+
+@keyframes header_fadein {
+  from {
+    top: -112px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* ----- slideNavigation ----- */
+header #slideNavigation {
+  right: -300px;
+  transition: right 0.4s ease-out;
+}
+
+header.open #slideNavigation {
+  right: 0;
+}
+
+/* ----- dropdown ----- */
+.dropdown .boxicons-chevron-down {
+  color: hsl(221, 39%, 11%) !important;
+  transition: transform 0.2s ease-out, background 0.25s ease-out;
+}
+
+.dropdown-btn:hover .boxicons-chevron-down,
+.dropdown-btn:focus .boxicons-chevron-down {
+  background-color: hsl(220, 14%, 96%);
+}
+
+.dropdown .dropdown-content {
+  transition: max-height 0.3s ease-out;
+}
+
+.dropdown.active > .dropdown-btn .boxicons-chevron-down {
+  transform: rotate(-180deg);
+}
+
+.noTransition {
+  transition: none !important;
+}
+
+/* ----- shadow ----- */
+#shadow {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: 0.3s ease-out;
+}
+
+header.open #shadow {
+  opacity: 1;
+  visibility: visible;
+  background-color: hsla(0, 0%, 9%, 0.5);
+}
+
+@media screen and (min-width: 1280px) {
+  #shadow {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .dropdown .boxicons-chevron-down {
+    color: inherit !important;
+  }
+
+  .dropdown .dropdown-content {
+    transition: top 0.3s ease-out, opacity 0.35s ease-out,
+      visibility 0.35s ease-out;
+  }
+
+  .dropdown .dropdown-content .link-color {
+    color: hsl(0, 0%, 9%) !important;
+  }
+
+  .dropdown .dropdown .boxicons-chevron-down {
+    transform: rotate(-90deg) !important;
+  }
+
+  .dropdown.active > .dropdown-btn {
+    color: hsl(158, 64%, 52%);
+  }
+
+  .dropdown.active .dropdown.active .dropdown-btn {
+    color: inherit;
+    background-color: hsl(220, 14%, 96%);
+  }
+
+  .dropdown.active > .dropdown-btn + .dropdown-content {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown.active .dropdown.active .dropdown-content {
+    top: 0;
+  }
+
+  .dropdown-btn:hover .boxicons-chevron-down,
+  .dropdown-btn:focus .boxicons-chevron-down {
+    background-color: transparent;
+  }
+}
