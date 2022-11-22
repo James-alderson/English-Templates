@@ -160,9 +160,20 @@ header.open #shadow {
   transition: transform 0.2s ease-out, filter 0.25s ease-out;
 }
 
-.image-box > div:hover + img {
-  filter: grayscale(0) brightness(0.65);
-  transform: scale(1.05);
+/* Targets only devices that can hover */
+@media (hover: hover) {
+  .image-box > div:hover + img {
+    filter: grayscale(0) brightness(0.65);
+    transform: scale(1.05);
+  }
+}
+
+/* Targets only devices that can't hover */
+@media (hover: none) {
+  .image-box > div + img {
+    filter: grayscale(0) brightness(0.65);
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (min-width: 1280px) {

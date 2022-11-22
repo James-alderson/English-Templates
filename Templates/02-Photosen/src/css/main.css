@@ -1025,9 +1025,22 @@ header.open #shadow {
   transition: transform 0.2s ease-out, filter 0.25s ease-out;
 }
 
-.image-box > div:hover + img {
-  filter: grayscale(0) brightness(0.65);
-  transform: scale(1.05);
+/* Targets only devices that can hover */
+
+@media (hover: hover) {
+  .image-box > div:hover + img {
+    filter: grayscale(0) brightness(0.65);
+    transform: scale(1.05);
+  }
+}
+
+/* Targets only devices that can't hover */
+
+@media (hover: none) {
+  .image-box > div + img {
+    filter: grayscale(0) brightness(0.65);
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1088,11 +1101,6 @@ header.open #shadow {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-emerald-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity));
-}
-
 .hover\:text-emerald-600:hover {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
@@ -1106,11 +1114,6 @@ header.open #shadow {
 .focus\:text-black:focus {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.focus\:text-emerald-500:focus {
-  --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
 .focus\:text-emerald-600:focus {
