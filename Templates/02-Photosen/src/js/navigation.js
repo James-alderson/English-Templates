@@ -20,6 +20,10 @@ DROPDOWN_BUTTONS.forEach((dropdown) => {
 
 function toggle_slideNavigation() {
   HEADER.classList.toggle('open')
+
+  if (HEADER.classList.contains('open'))
+    document.body.style.overflowY = 'hidden'
+  else document.body.style.overflowY = 'visible'
 }
 
 function toggle_dropdown(element) {
