@@ -8,6 +8,7 @@
    ++ slideNavigation
    ++ dropdown
    ++ shadow
+   ++ image-box
 
 ------------------------------ */
 
@@ -56,11 +57,9 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -99,7 +98,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -143,8 +142,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -369,8 +367,7 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -390,7 +387,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -438,9 +435,7 @@ video {
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -450,16 +445,16 @@ video {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -467,24 +462,24 @@ video {
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 ::backdrop {
@@ -497,16 +492,16 @@ video {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -514,24 +509,24 @@ video {
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 .container {
@@ -566,6 +561,10 @@ video {
   .container {
     max-width: 1536px;
   }
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .fixed {
@@ -608,8 +607,20 @@ video {
   right: 1.5rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .z-20 {
   z-index: 20;
+}
+
+.z-\[5\] {
+  z-index: 5;
 }
 
 .mx-auto {
@@ -633,6 +644,10 @@ video {
   margin-top: 3rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -649,6 +664,10 @@ video {
   max-height: 0px;
 }
 
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -659,6 +678,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -677,8 +700,21 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-neutral-900 {
@@ -689,6 +725,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-1 {
@@ -715,6 +756,21 @@ video {
   padding-right: 2rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
@@ -729,6 +785,10 @@ video {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-3xl {
@@ -751,12 +811,25 @@ video {
   line-height: 2rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-\[0\] {
   line-height: 0;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-white {
@@ -780,10 +853,14 @@ video {
 
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
-    0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .link-color {
@@ -791,7 +868,7 @@ video {
 }
 
 .link-color:hover,
-.link-color:focus {
+  .link-color:focus {
   color: hsl(158, 64%, 52%);
 }
 
@@ -842,17 +919,17 @@ body {
     'Noto Color Emoji';
 }
 
+header {
+  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+}
+
 nav {
   height: calc(100% - 40px);
   box-shadow: 0px 20px 10px rgba(229, 231, 235, 0.35) inset;
 }
 
-/* ===============
-   Layout
-=============== */
-
-header {
-  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+main {
+  animation: main_fadein 0.3s ease-out 2s 1 normal forwards;
 }
 
 @keyframes header_fadein {
@@ -866,6 +943,22 @@ header {
     opacity: 1;
   }
 }
+
+@keyframes main_fadein {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ===============
+   Layout
+=============== */
 
 /* ----- slideNavigation ----- */
 
@@ -907,7 +1000,6 @@ header.open #slideNavigation {
 #shadow {
   opacity: 0;
   visibility: hidden;
-  z-index: 10;
   transition: 0.3s ease-out;
 }
 
@@ -915,6 +1007,22 @@ header.open #shadow {
   opacity: 1;
   visibility: visible;
   background-color: hsla(0, 0%, 9%, 0.5);
+}
+
+/* ----- image-box ----- */
+
+.image-box {
+  overflow: hidden;
+}
+
+.image-box > div + img {
+  filter: grayscale(1) brightness(0.5);
+  transition: transform 0.2s ease-out, filter 0.25s ease-out;
+}
+
+.image-box > div:hover + img {
+  filter: grayscale(0) brightness(0.65);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 1280px) {
@@ -962,6 +1070,36 @@ header.open #shadow {
   .dropdown-btn:hover .boxicons-chevron-down,
   .dropdown-btn:focus .boxicons-chevron-down {
     background-color: transparent;
+  }
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.focus\:text-black:focus {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
 }
 
@@ -1145,8 +1283,7 @@ header.open #shadow {
   .xl\:shadow-none {
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
   .xl\:transition-none {
@@ -1164,78 +1301,92 @@ header.open #shadow {
   }
 }
 
-.\[\&\>a\]\:mt-6 > a {
+.\[\&\>a\]\:mt-6>a {
   margin-top: 1.5rem;
 }
 
-.\[\&\>a\]\:mt-4 > a {
+.\[\&\>a\]\:mt-4>a {
   margin-top: 1rem;
 }
 
-.\[\&\>a\]\:ml-6 > a {
+.\[\&\>a\]\:ml-6>a {
   margin-left: 1.5rem;
 }
 
-.\[\&\>a\]\:p-1 > a {
+.\[\&\>a\]\:p-1>a {
   padding: 0.25rem;
 }
 
 @media (min-width: 1280px) {
-  .xl\:\[\&\>a\]\:m-0 > a {
+  .xl\:\[\&\>a\]\:m-0>a {
     margin: 0px;
   }
 
-  .xl\:\[\&\>a\]\:mt-0 > a {
+  .xl\:\[\&\>a\]\:mt-0>a {
     margin-top: 0px;
   }
 
-  .xl\:\[\&\>a\]\:ml-8 > a {
+  .xl\:\[\&\>a\]\:ml-8>a {
     margin-left: 2rem;
   }
 
-  .xl\:\[\&\>a\]\:ml-3 > a {
+  .xl\:\[\&\>a\]\:ml-3>a {
     margin-left: 0.75rem;
   }
 
-  .xl\:\[\&\>a\]\:py-2\.5 > a {
+  .xl\:\[\&\>a\]\:py-2\.5>a {
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
   }
 
-  .xl\:\[\&\>a\]\:px-5 > a {
+  .xl\:\[\&\>a\]\:px-5>a {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
 
-  .xl\:\[\&\>a\]\:uppercase > a {
+  .xl\:\[\&\>a\]\:uppercase>a {
     text-transform: uppercase;
   }
 
-  .xl\:\[\&\>a\]\:tracking-widest > a {
+  .xl\:\[\&\>a\]\:tracking-widest>a {
     letter-spacing: 0.1em;
   }
 }
 
-.\[\&\>a\:first-of-type\]\:m-0 > a:first-of-type {
+.\[\&\>a\:first-of-type\]\:m-0>a:first-of-type {
   margin: 0px;
 }
 
-.\[\&\>a\:first-of-type\]\:mt-0 > a:first-of-type {
+.\[\&\>a\:first-of-type\]\:mt-0>a:first-of-type {
   margin-top: 0px;
 }
 
-.\[\&\>a\:first-of-type\]\:ml-0 > a:first-of-type {
+.\[\&\>a\:first-of-type\]\:ml-0>a:first-of-type {
   margin-left: 0px;
 }
 
-.\[\&\>\*\]\:text-base > * {
+.\[\&\>\*\]\:text-base>* {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
 @media (min-width: 1280px) {
-  .xl\:\[\&\>\*\]\:text-gray-900 > * {
+  .xl\:\[\&\>\*\]\:text-gray-900>* {
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
+  }
+}
+
+.\[\&\>div\]\:basis-1\/2>div {
+  flex-basis: 50%;
+}
+
+.\[\&\>div\]\:p-2>div {
+  padding: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .xl\:\[\&\>div\]\:basis-1\/3>div {
+    flex-basis: 33.333333%;
   }
 }

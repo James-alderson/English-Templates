@@ -8,6 +8,7 @@
    ++ slideNavigation
    ++ dropdown
    ++ shadow
+   ++ image-box
 
 ------------------------------ */
 
@@ -64,16 +65,17 @@ body {
     'Noto Color Emoji';
 }
 
+header {
+  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+}
+
 nav {
   height: calc(100% - 40px);
   box-shadow: 0px 20px 10px rgba(229, 231, 235, 0.35) inset;
 }
 
-/* ===============
-   Layout
-=============== */
-header {
-  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+main {
+  animation: main_fadein 0.3s ease-out 2s 1 normal forwards;
 }
 
 @keyframes header_fadein {
@@ -81,12 +83,27 @@ header {
     top: -112px;
     opacity: 0;
   }
+
   to {
     top: 0;
     opacity: 1;
   }
 }
 
+@keyframes main_fadein {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ===============
+   Layout
+=============== */
 /* ----- slideNavigation ----- */
 header #slideNavigation {
   right: -300px;
@@ -124,7 +141,6 @@ header.open #slideNavigation {
 #shadow {
   opacity: 0;
   visibility: hidden;
-  z-index: 10;
   transition: 0.3s ease-out;
 }
 
@@ -132,6 +148,21 @@ header.open #shadow {
   opacity: 1;
   visibility: visible;
   background-color: hsla(0, 0%, 9%, 0.5);
+}
+
+/* ----- image-box ----- */
+.image-box {
+  overflow: hidden;
+}
+
+.image-box > div + img {
+  filter: grayscale(1) brightness(0.5);
+  transition: transform 0.2s ease-out, filter 0.25s ease-out;
+}
+
+.image-box > div:hover + img {
+  filter: grayscale(0) brightness(0.65);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 1280px) {
