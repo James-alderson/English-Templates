@@ -8,6 +8,7 @@
    ++ slideNavigation
    ++ dropdown
    ++ shadow
+   ++ hide-content
    ++ image-box
 
 ------------------------------ */
@@ -150,11 +151,17 @@ header.open #shadow {
   background-color: hsla(0, 0%, 9%, 0.5);
 }
 
+/* ----- hide-content ----- */
+.hide-content {
+  overflow-y: hidden;
+}
+
 /* ----- image-box ----- */
 .image-box {
   overflow: hidden;
 }
 
+.image-box > a > img,
 .image-box > div + img {
   filter: grayscale(1) brightness(0.5);
   transition: transform 0.2s ease-out, filter 0.25s ease-out;
@@ -162,6 +169,12 @@ header.open #shadow {
 
 /* Targets only devices that can hover */
 @media (hover: hover) {
+  /* ----- hide-content ----- */
+  .hide-content {
+    margin-inline-end: 17px;
+  }
+
+  .image-box > a:hover > img,
   .image-box > div:hover + img {
     filter: grayscale(0) brightness(0.65);
     transform: scale(1.05);
@@ -170,6 +183,11 @@ header.open #shadow {
 
 /* Targets only devices that can't hover */
 @media (hover: none) {
+  body {
+    margin: 0 !important;
+  }
+
+  .image-box > a > img,
   .image-box > div + img {
     filter: grayscale(0) brightness(0.65);
     transform: scale(1.05);

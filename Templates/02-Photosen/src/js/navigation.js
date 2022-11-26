@@ -10,7 +10,10 @@ SHADOW.addEventListener('click', toggle_slideNavigation)
 OPEN_MENU.addEventListener('click', toggle_slideNavigation)
 CLOSE_MENU.addEventListener('click', toggle_slideNavigation)
 window.addEventListener('click', close_dropdown)
-window.addEventListener('resize', transition_dropdown)
+window.addEventListener('resize', () => {
+  transition_dropdown()
+  toggle_content()
+})
 
 DROPDOWN_BUTTONS.forEach((dropdown) => {
   dropdown.addEventListener('click', function () {
@@ -22,8 +25,15 @@ function toggle_slideNavigation() {
   HEADER.classList.toggle('open')
 
   if (HEADER.classList.contains('open'))
-    document.body.style.overflowY = 'hidden'
-  else document.body.style.overflowY = 'visible'
+    document.body.classList.add('hide-content')
+  else setTimeout(() => document.body.classList.remove('hide-content'), 400)
+}
+
+function toggle_content() {
+  if (window.innerWidth < 1280 && HEADER.classList.contains('open'))
+    document.body.classList.add('hide-content')
+  if (window.innerWidth >= 1280)
+    setTimeout(() => document.body.classList.remove('hide-content'), 400)
 }
 
 function toggle_dropdown(element) {
@@ -33,8 +43,8 @@ function toggle_dropdown(element) {
   dropdown.classList.toggle('active')
 
   /* First, set the max height value,
-      then after 300 milliseconds, change the max height value to initial,
-      so that the internal dropdown content is also displayed. */
+    then after 300 milliseconds, change the max height value to initial,
+    so that the internal dropdown content is also displayed. */
   if (dropdown.classList.contains('active')) {
     dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'
     setTimeout(() => (dropdownContent.style.maxHeight = 'initial'), 300)
