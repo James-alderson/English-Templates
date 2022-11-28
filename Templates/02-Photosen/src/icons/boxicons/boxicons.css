@@ -1,9 +1,11 @@
 @font-face {
   font-family: 'Boxicons';
-  src: url('./font/boxicons.eot') format('eot'),
-    url('./font/boxicons.ttf') format('ttf'),
-    url('./font/boxicons.woff') format('woff'),
-    url('./font/boxicons.svg') format('svg');
+  src: url('./font/Boxicons.eot');
+  src: url('./font/Boxicons.eot?#iefix') format('embedded-opentype'),
+    url('./font/Boxicons.woff2') format('woff2'),
+    url('./font/Boxicons.woff') format('woff'),
+    url('./font/Boxicons.ttf') format('truetype'),
+    url('./font/Boxicons.svg#Boxicons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
