@@ -4,7 +4,10 @@
 2. Import fonts
    ++ Josefin Sans
 3. Base styles
-4. Layout
+4. Components
+   ++ header-fadein
+   ++ no-transition
+5. Layout
    ++ slideNavigation
    ++ dropdown
    ++ shadow
@@ -28,6 +31,11 @@
   .link-color:hover,
   .link-color:focus {
     color: hsl(158, 64%, 52%);
+  }
+
+  #slideNavigation .link-color:hover,
+  #slideNavigation .link-color:focus {
+    color: hsl(333, 71%, 51%);
   }
 }
 
@@ -75,10 +83,6 @@ body {
     'Noto Color Emoji';
 }
 
-header {
-  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
-}
-
 nav {
   height: calc(100% - 40px);
   box-shadow: 0px 20px 10px rgba(229, 231, 235, 0.35) inset;
@@ -88,27 +92,40 @@ main {
   animation: main_fadein 0.3s ease-out 2s 1 normal forwards;
 }
 
-@keyframes header_fadein {
+@keyframes main_fadein {
   from {
-    top: -112px;
     opacity: 0;
   }
-
   to {
-    top: 0;
     opacity: 1;
   }
 }
 
-@keyframes main_fadein {
+/* ===============
+   Components
+=============== */
+/* ----- header-fadein ----- */
+.header-fadein {
+  opacity: 0;
+  transform: translateY(-112px);
+  animation: header_fadein 0.3s ease-out 1s 1 normal forwards;
+}
+
+@keyframes header_fadein {
   from {
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(-112px);
   }
+
   to {
     opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
   }
+}
+
+/* ----- no-transition ----- */
+.no-transition {
+  transition: none !important;
 }
 
 /* ===============
@@ -116,12 +133,12 @@ main {
 =============== */
 /* ----- slideNavigation ----- */
 header #slideNavigation {
-  right: -300px;
-  transition: right 0.4s ease-out;
+  transform: translateX(300px);
+  transition: transform 0.4s ease-out;
 }
 
 header.open #slideNavigation {
-  right: 0;
+  transform: translateX(0);
 }
 
 /* ----- dropdown ----- */
@@ -141,10 +158,6 @@ header.open #slideNavigation {
 
 .dropdown.active > .dropdown-btn .boxicons-chevron-down {
   transform: rotate(-180deg);
-}
-
-.noTransition {
-  transition: none !important;
 }
 
 /* ----- shadow ----- */
@@ -204,6 +217,16 @@ header.open #shadow {
 }
 
 @media screen and (min-width: 1280px) {
+  #slideNavigation .link-color:hover,
+  #slideNavigation .link-color:focus {
+    color: hsl(158, 64%, 52%);
+  }
+
+  header #slideNavigation {
+    transform: translateX(0);
+    transition: initial;
+  }
+
   #shadow {
     opacity: 0 !important;
     visibility: hidden !important;

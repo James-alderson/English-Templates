@@ -36,32 +36,39 @@
     <link rel="manifest" href="./images/favicon/site.webmanifest" />
   </head>
   <body class="bg-neutral-900 text-white">
-    <header class="relative top-[-112px] z-10 py-9 px-4 opacity-0">
-      <div class="container mx-auto flex items-center justify-between">
-        <h1 class="text-3xl font-medium lg:text-4xl">
-          <a href="./index.html">Photosen</a>
-        </h1>
-        <button id="openMenu" class="link-color text-3xl leading-[0] xl:hidden">
-          <i class="boxicons-menu inline-flex"></i>
-        </button>
+    <header class="relative z-10 py-9 px-4">
+      <div class="container mx-auto xl:flex xl:items-center xl:justify-between">
+        <div
+          class="header-container flex w-full items-center justify-between xl:block xl:w-auto">
+          <h1 class="text-3xl font-medium lg:text-4xl">
+            <a href="./index.html">Photosen</a>
+          </h1>
+          <button
+            id="openMenu"
+            class="link-color text-3xl leading-[0] xl:hidden"
+            aria-label="open_menu">
+            <i class="boxicons-menu inline-flex"></i>
+          </button>
+        </div>
         <!-- Slide navigation -->
         <div
           id="slideNavigation"
-          class="fixed inset-y-0 right-0 z-30 bg-white py-6 text-xl text-gray-900 xl:static xl:w-4/6 xl:bg-transparent xl:p-0 xl:text-xs xl:text-neutral-400 xl:transition-none">
+          class="fixed inset-y-0 right-0 z-30 bg-white py-6 text-xl text-gray-900 xl:static xl:w-4/6 xl:bg-transparent xl:p-0 xl:text-xs xl:text-neutral-400">
           <button
             id="closeMenu"
-            class="link-color absolute top-6 right-6 text-4xl leading-[0] xl:hidden">
+            class="link-color absolute top-6 right-6 text-4xl leading-[0] xl:hidden"
+            aria-label="close_menu">
             <i class="boxicons-x inline-flex"></i>
           </button>
           <nav
             class="mt-16 overflow-y-scroll border-t px-8 pt-8 pb-20 xl:mt-0 xl:flex xl:items-center xl:justify-between xl:overflow-y-visible xl:border-0 xl:p-0 xl:shadow-none">
             <div
               class="flex flex-col xl:flex-row [&>a]:mt-6 xl:[&>a]:mt-0 xl:[&>a]:ml-8 xl:[&>a]:uppercase xl:[&>a]:tracking-widest [&>a:first-of-type]:m-0">
-              <a href="./index.html">Home</a>
+              <a class="link-color" href="./index.html">Home</a>
               <!-- Dropdown -->
               <div class="dropdown mt-6 xl:relative xl:mt-0 xl:ml-6">
                 <button
-                  class="dropdown-btn link-color inline-flex w-full items-center justify-between text-emerald-400 xl:relative xl:w-[initial] xl:uppercase xl:tracking-widest">
+                  class="dropdown-btn link-color inline-flex w-full items-center justify-between text-pink-600 xl:relative xl:w-[initial] xl:uppercase xl:tracking-widest xl:text-emerald-400">
                   Gallery
                   <i
                     class="boxicons-chevron-down inline-flex rounded-full p-1 xl:absolute xl:right-[-1rem] xl:p-0 xl:text-base"></i>
@@ -144,16 +151,16 @@
             </div>
             <div
               class="mt-12 flex text-2xl xl:mt-0 xl:text-lg [&>a]:ml-6 [&>a]:p-1 xl:[&>a]:ml-3 [&>a:first-of-type]:ml-0">
-              <a class="link-color leading-[0]" href="#">
+              <a class="link-color leading-[0]" href="#" aria-label="facebook">
                 <i class="boxicons-facebook inline-flex"></i>
               </a>
-              <a class="link-color leading-[0]" href="#">
+              <a class="link-color leading-[0]" href="#" aria-label="twitter">
                 <i class="boxicons-twitter inline-flex"></i>
               </a>
-              <a class="link-color leading-[0]" href="#">
+              <a class="link-color leading-[0]" href="#" aria-label="instagram">
                 <i class="boxicons-instagram inline-flex"></i>
               </a>
-              <a class="link-color leading-[0]" href="#">
+              <a class="link-color leading-[0]" href="#" aria-label="youtube">
                 <i class="boxicons-youtube inline-flex"></i>
               </a>
             </div>
@@ -163,7 +170,7 @@
       <!-- Shadow -->
       <div id="shadow" class="fixed inset-0 z-20 h-full w-full"></div>
     </header>
-    <main class="invisible px-2 opacity-0">
+    <main class="px-2 opacity-0">
       <h1
         class="my-10 text-center text-4xl font-medium lg:text-5xl xl:text-6xl">
         Portrait Gallery
@@ -180,7 +187,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-1.jpg"
                 data-src="./images/gallery/portrait/portrait-img-1.jpg"
-                alt="portrait-img-1.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-1.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -194,7 +204,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-2.jpg"
                 data-src="./images/gallery/portrait/portrait-img-2.jpg"
-                alt="portrait-img-2.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-2.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -208,7 +221,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-3.jpg"
                 data-src="./images/gallery/portrait/portrait-img-3.jpg"
-                alt="portrait-img-3.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-3.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -222,7 +238,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-4.jpg"
                 data-src="./images/gallery/portrait/portrait-img-4.jpg"
-                alt="portrait-img-4.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-4.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -236,7 +255,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-5.jpg"
                 data-src="./images/gallery/portrait/portrait-img-5.jpg"
-                alt="portrait-img-5.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-5.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -250,7 +272,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-6.jpg"
                 data-src="./images/gallery/portrait/portrait-img-6.jpg"
-                alt="portrait-img-6.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-6.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -264,7 +289,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-7.jpg"
                 data-src="./images/gallery/portrait/portrait-img-7.jpg"
-                alt="portrait-img-7.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-7.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -278,7 +306,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-8.jpg"
                 data-src="./images/gallery/portrait/portrait-img-8.jpg"
-                alt="portrait-img-8.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-8.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -292,7 +323,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-9.jpg"
                 data-src="./images/gallery/portrait/portrait-img-9.jpg"
-                alt="portrait-img-9.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-9.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -306,7 +340,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-1.jpg"
                 data-src="./images/gallery/portrait/portrait-img-1.jpg"
-                alt="portrait-img-1.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-1.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -320,7 +357,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-2.jpg"
                 data-src="./images/gallery/portrait/portrait-img-2.jpg"
-                alt="portrait-img-2.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-2.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -334,7 +374,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-3.jpg"
                 data-src="./images/gallery/portrait/portrait-img-3.jpg"
-                alt="portrait-img-3.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-3.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -348,7 +391,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-4.jpg"
                 data-src="./images/gallery/portrait/portrait-img-4.jpg"
-                alt="portrait-img-4.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-4.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -362,7 +408,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-5.jpg"
                 data-src="./images/gallery/portrait/portrait-img-5.jpg"
-                alt="portrait-img-5.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-5.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -376,7 +425,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-6.jpg"
                 data-src="./images/gallery/portrait/portrait-img-6.jpg"
-                alt="portrait-img-6.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-6.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -390,7 +442,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-7.jpg"
                 data-src="./images/gallery/portrait/portrait-img-7.jpg"
-                alt="portrait-img-7.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-7.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -404,7 +459,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-8.jpg"
                 data-src="./images/gallery/portrait/portrait-img-8.jpg"
-                alt="portrait-img-8.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-8.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -418,7 +476,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-9.jpg"
                 data-src="./images/gallery/portrait/portrait-img-9.jpg"
-                alt="portrait-img-9.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-9.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -432,7 +493,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-1.jpg"
                 data-src="./images/gallery/portrait/portrait-img-1.jpg"
-                alt="portrait-img-1.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-1.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -446,7 +510,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-2.jpg"
                 data-src="./images/gallery/portrait/portrait-img-2.jpg"
-                alt="portrait-img-2.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-2.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -460,7 +527,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-3.jpg"
                 data-src="./images/gallery/portrait/portrait-img-3.jpg"
-                alt="portrait-img-3.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-3.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -474,7 +544,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-4.jpg"
                 data-src="./images/gallery/portrait/portrait-img-4.jpg"
-                alt="portrait-img-4.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-4.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -488,7 +561,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-5.jpg"
                 data-src="./images/gallery/portrait/portrait-img-5.jpg"
-                alt="portrait-img-5.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-5.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -502,7 +578,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-6.jpg"
                 data-src="./images/gallery/portrait/portrait-img-6.jpg"
-                alt="portrait-img-6.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-6.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -516,7 +595,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-7.jpg"
                 data-src="./images/gallery/portrait/portrait-img-7.jpg"
-                alt="portrait-img-7.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-7.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -530,7 +612,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-8.jpg"
                 data-src="./images/gallery/portrait/portrait-img-8.jpg"
-                alt="portrait-img-8.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-8.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -544,7 +629,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-9.jpg"
                 data-src="./images/gallery/portrait/portrait-img-9.jpg"
-                alt="portrait-img-9.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-9.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -558,7 +646,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-1.jpg"
                 data-src="./images/gallery/portrait/portrait-img-1.jpg"
-                alt="portrait-img-1.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-1.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -572,7 +663,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-2.jpg"
                 data-src="./images/gallery/portrait/portrait-img-2.jpg"
-                alt="portrait-img-2.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-2.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -586,7 +680,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-3.jpg"
                 data-src="./images/gallery/portrait/portrait-img-3.jpg"
-                alt="portrait-img-3.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-3.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -600,7 +697,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-4.jpg"
                 data-src="./images/gallery/portrait/portrait-img-4.jpg"
-                alt="portrait-img-4.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-4.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -614,7 +714,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-5.jpg"
                 data-src="./images/gallery/portrait/portrait-img-5.jpg"
-                alt="portrait-img-5.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-5.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -628,7 +731,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-6.jpg"
                 data-src="./images/gallery/portrait/portrait-img-6.jpg"
-                alt="portrait-img-6.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-6.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -642,7 +748,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-7.jpg"
                 data-src="./images/gallery/portrait/portrait-img-7.jpg"
-                alt="portrait-img-7.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-7.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -656,7 +765,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-8.jpg"
                 data-src="./images/gallery/portrait/portrait-img-8.jpg"
-                alt="portrait-img-8.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-8.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
@@ -670,7 +782,10 @@
                 class="min-h-[360px] w-full object-cover"
                 src="./images/gallery/portrait/LQIP/portrait-img-9.jpg"
                 data-src="./images/gallery/portrait/portrait-img-9.jpg"
-                alt="portrait-img-9.jpg" />
+                width="400"
+                height="360"
+                alt="portrait-img-9.jpg"
+                loading="lazy" />
             </a>
           </div>
         </div>
