@@ -5,14 +5,18 @@
    ++ Josefin Sans
 3. Base styles
 4. Components
-   ++ header-fadein
+   ++ preload
+   ++ hide-content
    ++ no-transition
+   ++ header-fadein
+   ++ main-fadein
 5. Layout
    ++ slideNavigation
    ++ dropdown
-   ++ shadow
-   ++ hide-content
    ++ image-box
+   ++ shadow
+6. Breakpoints
+   ++ XL
 
 ------------------------------ */
 
@@ -23,36 +27,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .link-color {
-    transition: color 0.25s ease-out;
-  }
-
-  .link-color:hover,
-  .link-color:focus {
-    color: hsl(158, 64%, 52%);
-  }
-
-  #slideNavigation .link-color:hover,
-  #slideNavigation .link-color:focus {
-    color: hsl(333, 71%, 51%);
-  }
-}
-
 /* ===============
    Import fonts
 =============== */
 /* ----- Josefin Sans ----- */
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('../fonts/Josefin_Sans/JosefinSans-Medium.eot');
-  src: url('../fonts/Josefin_Sans/JosefinSans-Medium.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/Josefin_Sans/JosefinSans-Medium.woff2') format('woff2'),
+  src: url('../fonts/Josefin_Sans/JosefinSans-Medium.woff2') format('woff2'),
     url('../fonts/Josefin_Sans/JosefinSans-Medium.woff') format('woff'),
-    url('../fonts/Josefin_Sans/JosefinSans-Medium.ttf') format('truetype'),
-    url('../fonts/Josefin_Sans/JosefinSans-Medium.svg#JosefinSans-Medium')
-      format('svg');
+    url('../fonts/Josefin_Sans/JosefinSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -60,14 +43,9 @@
 
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('../fonts/Josefin_Sans/JosefinSans-Regular.eot');
-  src: url('../fonts/Josefin_Sans/JosefinSans-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/Josefin_Sans/JosefinSans-Regular.woff2') format('woff2'),
-    url('../fonts/Josefin_Sans/JosefinSans-Regular.woff') format('woff'),
-    url('../fonts/Josefin_Sans/JosefinSans-Regular.ttf') format('truetype'),
-    url('../fonts/Josefin_Sans/JosefinSans-Regular.svg#JosefinSans-Regular')
-      format('svg');
+  src: url('../fonts/Josefin_Sans/JosefinSans-Medium.woff2') format('woff2'),
+    url('../fonts/Josefin_Sans/JosefinSans-Medium.woff') format('woff'),
+    url('../fonts/Josefin_Sans/JosefinSans-Medium.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -89,21 +67,23 @@ nav {
 }
 
 main {
-  animation: main_fadein 0.3s ease-out 2s 1 normal forwards;
-}
-
-@keyframes main_fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transition: opacity 0.3s ease-out 2s;
 }
 
 /* ===============
    Components
 =============== */
+/* ----- preload ----- */
+.preload,
+.preload * {
+  transition: none !important;
+}
+
+/* ----- hide-content ----- */
+.hide-content {
+  overflow-y: hidden;
+}
+
 /* ----- header-fadein ----- */
 .header-fadein {
   opacity: 0;
@@ -121,6 +101,26 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ----- main-fadein ----- */
+.main-fadein {
+  opacity: 1;
+}
+
+/* ----- link-color ----- */
+.link-color {
+  transition: color 0.25s ease-out;
+}
+
+.link-color:hover,
+.link-color:focus {
+  color: hsl(158, 64%, 52%);
+}
+
+#slideNavigation .link-color:hover,
+#slideNavigation .link-color:focus {
+  color: hsl(333, 71%, 51%);
 }
 
 /* ----- no-transition ----- */
@@ -158,24 +158,6 @@ header.open #slideNavigation {
 
 .dropdown.active > .dropdown-btn .boxicons-chevron-down {
   transform: rotate(-180deg);
-}
-
-/* ----- shadow ----- */
-#shadow {
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease-out;
-}
-
-header.open #shadow {
-  opacity: 1;
-  visibility: visible;
-  background-color: hsla(0, 0%, 9%, 0.5);
-}
-
-/* ----- hide-content ----- */
-.hide-content {
-  overflow-y: hidden;
 }
 
 /* ----- image-box ----- */
@@ -216,6 +198,23 @@ header.open #shadow {
   }
 }
 
+/* ----- shadow ----- */
+#shadow {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-out;
+}
+
+header.open #shadow {
+  opacity: 1;
+  visibility: visible;
+  background-color: hsla(0, 0%, 9%, 0.5);
+}
+
+/* ===============
+   Breakpoints
+=============== */
+/* ----- XL ----- */
 @media screen and (min-width: 1280px) {
   #slideNavigation .link-color:hover,
   #slideNavigation .link-color:focus {

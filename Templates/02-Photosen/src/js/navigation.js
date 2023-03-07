@@ -61,6 +61,9 @@ function header_animation() {
 
   remove_class(HEADER, 'header-fadein', 1300)
   remove_class(HEADER_CONTAINER, 'header-fadein', 1300)
+
+  HEADER.classList.remove('opacity-0')
+  HEADER_CONTAINER.classList.remove('opacity-0')
 }
 
 function toggle_content() {

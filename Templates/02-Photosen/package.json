@@ -4,8 +4,9 @@
   "description": "Photosen photography team, Here you can see a series of the team's portfolios",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css",
-    "watch": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css --watch",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css && webpack --mode development",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css --minify && webpack --mode production",
+    "serve": "webpack serve",
     "clean": "prettier --write ./src/**/*"
   },
   "repository": {
@@ -26,8 +27,17 @@
   },
   "homepage": "https://github.com/James-alderson/English-Templates/tree/main/Templates/02-Photosen#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "favicons-webpack-plugin": "^6.0.0",
+    "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.2.3"
+    "tailwindcss": "^3.2.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   }
 }
