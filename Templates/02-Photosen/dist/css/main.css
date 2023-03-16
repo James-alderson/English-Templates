@@ -1049,7 +1049,7 @@ header.open #slideNavigation {
 .image-box > a > img,
 .image-box > div + img {
   filter: grayscale(1) brightness(0.5);
-  transition: transform 0.2s ease-out, filter 0.25s ease-out;
+  transition: transform 0.15s ease-out, filter 0.2s ease-out;
 }
 
 /* Targets only devices that can hover */
@@ -1065,7 +1065,7 @@ header.open #slideNavigation {
   .image-box > a:hover > img,
   .image-box > div:hover + img {
     filter: grayscale(0) brightness(0.65);
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
@@ -1124,8 +1124,7 @@ header.open #shadow {
   }
 
   .dropdown .dropdown-content {
-    transition: top 0.3s ease-out, opacity 0.35s ease-out,
-      visibility 0.35s ease-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .dropdown .dropdown-content .link-color {
